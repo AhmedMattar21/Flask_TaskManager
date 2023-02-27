@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>{{ title }}</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' href="{{ url_for('static', filename='css/main.css')}}">
+    <script src="{{url_for('static', filename='js/main.js')}}"></script>
+</head>
+<body>
+    <div class="content" style="overflow-x:auto;">
+        <h1>Task Manager</h1>
+        <table>
+            <tr>
+                <th>Task</th>
+                <th>Added</th>
+                <th>Actions</th>
+            </tr>
+            {%for i in Task:%}
+            <tr>
+                <td>{{i[1]}}</td>
+                <td>{{i[2]}}</td>
+                <td>
+                    <a href="/update/{{i[0]}}"">Update</a>
+                    <a href="/delete/{{i[0]}}">Delete</a>
+                    <a href="/done/{{i[0]}}">Done</a>
+                </td>
+            </tr>
+            {%endfor%}
+            {%for i in done_tasks:%}
+            <tr class="done">
+                <td>{{i[1]}}</td>
+                <td>{{i[2]}}</td>
+                <td>
+                    <a href="/update/{{i[0]}}"">Update</a>
+                    <a href="/delete/{{i[0]}}">Delete</a>
+                    <a href="/undone/{{i[0]}}">Undone</a>
+                </td>
+            </tr>
+            {%endfor%}
+        </table>
+        <form action="/" method="POST">
+            <input class="text"type="text" name="content" id="content">
+            <br>
+            <input class="btn" type="submit" value="Add Task">
+        </form>
+    </div>
+</body>
+</html>

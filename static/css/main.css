@@ -1,0 +1,57 @@
+body{
+    background-color: rgb(24, 27, 40);
+    color: gold;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.content table{
+    border: 1px;
+    border-collapse: collapse white;
+    width: 100%;
+    font-size: large;
+    
+  }
+th, td {
+    border-bottom: 1px solid #302561;
+    text-align: left;
+    padding: 20px 20px;
+  }
+th {
+    background-color: #3b3f79;
+    color: white;
+    font-weight: bolder;
+  }
+
+.text
+{
+    border-radius: 20px;
+    padding: 20px;
+    margin-top: 20px;
+    font-size: larger;
+    width: 70%;
+    text-align: center;
+}
+
+.text:hover{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+tr:hover {background-color: rgb(68, 47, 95);color: aliceblue;}
+#tr:nth-child(even) {background-color: #242446;}
+
+.btn{
+    background-color: rgb(184, 133, 250);
+    color: black;
+    font-size: larger;
+    margin-top: 20px;
+    border-radius: 20px;
+    padding: 10px;
+  }
+  
+.btn:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+
+.done{
+  color: darkcyan;
+}
